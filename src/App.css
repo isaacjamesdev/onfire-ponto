@@ -41,7 +41,11 @@ th {
   border: 1px solid black;
 }
 
-.left {
+.left-text {
+  text-align: left;
+}
+
+.center-text {
   text-align: center;
   padding-left: 2px;
 }
