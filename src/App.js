@@ -23,11 +23,14 @@ function App() {
     ctps: "",
     empregador: "",
     endereco: "",
-    startPeriod: "",
-    endPeriod: "",
+    startYear: "",
+    endYear: "",
+    startMonth: "01",
+    endMonth: "01",
   });
 
   const handleOnChange = useCallback((event) => {
+    console.log(event.target.name, event.target.value);
     setForm((old) => ({
       ...old,
       [event.target.name]: event.target.value,
@@ -35,7 +38,13 @@ function App() {
   }, []);
 
   const handlePrint = () => {
-    setListOfMonths(getListOfMonths(form.startPeriod, form.endPeriod));
+    setListOfMonths(
+      getListOfMonths(
+        `${form.startYear}-${form.startMonth}`,
+        `${form.endYear}-${form.endMonth}`
+      )
+    );
+
     setTimeout(() => {
       window.print();
     }, 2000);
@@ -48,7 +57,7 @@ function App() {
   return (
     <div>
       <div className="form">
-        <Form onSubmit={handlePrint} onChange={handleOnChange} />
+        <Form onSubmit={handlePrint} onChange={handleOnChange} value={form} />
       </div>
       {listOfMonths.map((month) => (
         <div>
@@ -91,7 +100,9 @@ function App() {
             </thead>
             <TableBody month={month} />
 
-            <span className="signature-line">___________________________________________</span>
+            <span className="signature-line">
+              ___________________________________________
+            </span>
             <span className="signature">Assinatura do Empregado</span>
           </table>
         </div>

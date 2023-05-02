@@ -1,8 +1,8 @@
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Select, MenuItem, Divider, InputLabel } from "@mui/material";
 import Box from "@mui/material/Box";
 import "../App.css";
 
-function Form({ onChange, onSubmit }) {
+function Form({ onChange, onSubmit, value }) {
   return (
     <Box
       component="form"
@@ -62,23 +62,73 @@ function Form({ onChange, onSubmit }) {
             onChange={onChange}
             name="endereco"
           />
-          <TextField
-            id="outlined-basic"
-            variant="outlined"
-            type="text"
-            label="INICIAL: YYYY-MM"
-            onChange={onChange}
-            name="startPeriod"
-          />
-          <TextField
-            id="outlined-basic"
-            variant="outlined"
-            type="text"
-            label="FINAL: YYYY-MM"
-            onChange={onChange}
-            name="endPeriod"
-          />
+          <div>
+            <Divider>Período Inicial</Divider>
+            <InputLabel id="demo-simple-select-label">Mês Inicial</InputLabel>
+
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={value.startMonth}
+              onChange={onChange}
+              name="startMonth"
+            >
+              <MenuItem value={"01"}>Janeiro</MenuItem>
+              <MenuItem value={"02"}>Fevereiro</MenuItem>
+              <MenuItem value={"03"}>Março</MenuItem>
+              <MenuItem value={"04"}>Abril</MenuItem>
+              <MenuItem value={"05"}>Maio</MenuItem>
+              <MenuItem value={"06"}>Junho</MenuItem>
+              <MenuItem value={"07"}>Julho</MenuItem>
+              <MenuItem value={"08"}>Agosto</MenuItem>
+              <MenuItem value={"09"}>Setembro</MenuItem>
+              <MenuItem value={"10"}>Outubro</MenuItem>
+              <MenuItem value={"11"}>Novembro</MenuItem>
+              <MenuItem value={"12"}>Dezembro</MenuItem>
+            </Select>
+            <TextField
+              id="outlined-basic"
+              variant="outlined"
+              type="text"
+              label="Ano"
+              onChange={onChange}
+              name="startYear"
+            />
+          </div>
+          <div>
+            <Divider>Período Final</Divider>
+            <InputLabel id="demo-simple-select-label">Mês Final</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={value.endMonth}
+              onChange={onChange}
+              name="endMonth"
+            >
+              <MenuItem value={"01"}>Janeiro</MenuItem>
+              <MenuItem value={"02"}>Fevereiro</MenuItem>
+              <MenuItem value={"03"}>Março</MenuItem>
+              <MenuItem value={"04"}>Abril</MenuItem>
+              <MenuItem value={"05"}>Maio</MenuItem>
+              <MenuItem value={"06"}>Junho</MenuItem>
+              <MenuItem value={"07"}>Julho</MenuItem>
+              <MenuItem value={"08"}>Agosto</MenuItem>
+              <MenuItem value={"09"}>Setembro</MenuItem>
+              <MenuItem value={"10"}>Outubro</MenuItem>
+              <MenuItem value={"11"}>Novembro</MenuItem>
+              <MenuItem value={"12"}>Dezembro</MenuItem>
+            </Select>
+            <TextField
+              id="outlined-basic"
+              variant="outlined"
+              type="text"
+              label="Ano Final"
+              onChange={onChange}
+              name="endYear"
+            />
+          </div>
         </form>
+        <Divider>Tudo pronto?</Divider>
         <Button variant="contained" type="button" onClick={onSubmit}>
           Imprimir
         </Button>
