@@ -101,6 +101,7 @@ function App() {
       </div>
       {listOfMonths.map((month) => (
         <div>
+          <p className="center-text to-print">Controle de frequência:</p>
           <table className="page-break to-print">
             <thead className="border">
               <tr>
