@@ -53,7 +53,7 @@ function App() {
       {listOfMonths.map((month) => (
         <div>
           <table className="page-break to-print">
-            <thead>
+            <thead className="border">
               <tr>
                 <th colSpan={6}>Empregador: {form.empregador}</th>
                 <th className="border" colSpan={6}>
@@ -90,6 +90,9 @@ function App() {
               </tr>
             </thead>
             <TableBody month={month} />
+
+            <span className="signature-line">___________________________________________</span>
+            <span className="signature">Assinatura do Empregado</span>
           </table>
         </div>
       ))}

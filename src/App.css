@@ -23,7 +23,6 @@ table {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 1px solid black;
   font-size: 12px;
 }
 
@@ -56,7 +55,21 @@ th {
 }
 
 .to-print {
-  display: none;
+  /* display: none; */
+}
+
+.signature {
+  text-align: right;
+  position: absolute;
+  right: 90px;
+  margin-top: 54px;
+}
+
+.signature-line {
+  text-align: right;
+  position: absolute;
+  right: 90px;
+  margin-top: 40px;
 }
 
 @media print {
