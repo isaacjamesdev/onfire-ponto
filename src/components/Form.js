@@ -14,6 +14,7 @@ function Form({ onChange, onSubmit, value }) {
     >
       <div>
         <form style={{ margin: "auto" }}>
+          <Divider>Dados do funcionário</Divider>
           <TextField
             id="outlined-basic"
             variant="outlined"
@@ -46,6 +47,7 @@ function Form({ onChange, onSubmit, value }) {
             onChange={onChange}
             name="ctps"
           />
+          <Divider>Dados da Empresa</Divider>
           <TextField
             id="outlined-basic"
             variant="outlined"
@@ -61,6 +63,22 @@ function Form({ onChange, onSubmit, value }) {
             label="Endereço da Empresa"
             onChange={onChange}
             name="endereco"
+          />
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            type="text"
+            label="CNPJ/CEI:"
+            onChange={onChange}
+            name="cnpj"
+          />
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            type="text"
+            label="Lotação:"
+            onChange={onChange}
+            name="lotacao"
           />
           <div>
             <Divider>Período Inicial</Divider>

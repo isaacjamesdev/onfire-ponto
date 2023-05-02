@@ -3,9 +3,13 @@ import { getListOfMonths, getPeriod } from "./utils";
 import "./App.css";
 import TableBody from "./components/Table";
 import Form from "./components/Form";
-import { Accordion, AccordionSummary, Divider, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionSummary,
+  Divider,
+  Typography,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 
 import pix from "./pix.png";
 
@@ -32,6 +36,8 @@ function App() {
     endYear: "",
     startMonth: "01",
     endMonth: "01",
+    cnpj: "",
+    lotacao: "",
   });
 
   const handleOnChange = useCallback((event) => {
@@ -81,7 +87,7 @@ function App() {
           opção "Cabeçalhos e rodapés"{" "}
         </p>
 
-        <Divider style={{ margin: "20px 0" }} >Cafézinho:</Divider>
+        <Divider style={{ margin: "20px 0" }}>Cafézinho:</Divider>
         <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -99,24 +105,28 @@ function App() {
             <thead className="border">
               <tr>
                 <th colSpan={6}>Empregador: {form.empregador}</th>
-                <th className="border" colSpan={6}>
-                  Empregado: {form.empregado} {form.nome}
-                </th>
+                <th colSpan={4}>CNPJ/CEI: {form.cnpj}</th>
               </tr>
               <tr>
                 <th colSpan={6}>Endereço: {form.endereco}</th>
-                <th className="border" colSpan={6}>
-                  Cargo: {form.cargo}
-                </th>
+                <th colSpan={4}>Período: De {getPeriod(month)}</th>
               </tr>
               <tr>
-                <th colSpan={6}>
-                  CNPJ/CEI: 06.029.766/0002-66 Período: De {getPeriod(month)}
-                </th>
+                <th colSpan={6}>Atividade: </th>
+                <th colSpan={4}>Lotação: {form.lotacao}</th>
+              </tr>
+              <tr>
                 <th className="border" colSpan={6}>
+                  Empregado: {form.empregado} {form.nome}
+                </th>
+                <th className="border" colSpan={2}>
+                  Cargo: {form.cargo}
+                </th>
+                <th className="border" colSpan={2}>
                   CTPS: {form.ctps}
                 </th>
               </tr>
+              {/*  */}
               <tr>
                 <th colSpan={5} className="border"></th>
                 <th colSpan={2} className="border">
@@ -124,6 +134,7 @@ function App() {
                 </th>
                 <th colSpan={1} className="border"></th>
               </tr>
+              {/*  */}
               <tr className="border">
                 {TABLE_HEADER.map((header, idx) => (
                   <th key={idx} className="border" colSpan={header.colSpan}>
