@@ -58,6 +58,15 @@ function App() {
     <div>
       <div className="form">
         <Form onSubmit={handlePrint} onChange={handleOnChange} value={form} />
+        <p>Dicas:</p>
+        <p>
+          1: Converta o .pdf para .doc através{` `}
+          <a href="https://www.ilovepdf.com/pt/pdf_para_word" target="_blank">
+            desse link
+          </a>
+          {` `}e edite o arquivo para adicionar férias, atestados e feriados.
+        </p>
+        <p>2: Nas configurações de impressão > Mais definições > desmarque a opção "Cabeçalhos e rodapés" </p>
       </div>
       {listOfMonths.map((month) => (
         <div>
