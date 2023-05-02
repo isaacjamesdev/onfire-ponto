@@ -117,13 +117,13 @@ function App() {
                 <th colSpan={4} className="border left-text">Lotação: {form.lotacao}</th>
               </tr>
               <tr>
-                <th className="border left-text" colSpan={6}>
+                <th className="border left-text" colSpan={4}>
                   Empregado: {form.empregado} {form.nome}
                 </th>
-                <th className="border left-text" colSpan={2}>
+                <th className="border left-text" colSpan={3}>
                   Cargo: {form.cargo}
                 </th>
-                <th className="border left-text" colSpan={2}>
+                <th className="border left-text" colSpan={3}>
                   CTPS: {form.ctps}
                 </th>
               </tr>
@@ -133,7 +133,7 @@ function App() {
                 <th colSpan={2} className="border left-text">
                   Prorrogação
                 </th>
-                <th colSpan={1} className="border"></th>
+                <th colSpan={2} className="border"></th>
               </tr>
               {/*  */}
               <tr className="border">
