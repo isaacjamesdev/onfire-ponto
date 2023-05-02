@@ -90,7 +90,7 @@ function Form({ onChange, onSubmit, value }) {
               id="outlined-basic"
               variant="outlined"
               type="text"
-              label="Ano"
+              label="Ano Inicial"
               onChange={onChange}
               name="startYear"
             />
