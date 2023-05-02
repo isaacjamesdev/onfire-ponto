@@ -105,29 +105,42 @@ function App() {
           <table className="page-break to-print">
             <thead className="border">
               <tr>
-                <th colSpan={6} className="border left-text">Empregador: {form.empregador}</th>
-                <th colSpan={4} className="border left-text">CNPJ/CEI: {form.cnpj}</th>
+                <th colSpan={6} className="border left-text">
+                  Empregador: {form.empregador}
+                </th>
+                <th colSpan={4} className="border left-text">
+                  CNPJ/CEI: {form.cnpj}
+                </th>
               </tr>
               <tr>
-                <th colSpan={6} className="border left-text">Endereço: {form.endereco}</th>
-                <th colSpan={4} className="border left-text">Período: De {getPeriod(month)}</th>
+                <th colSpan={6} className="border left-text">
+                  Endereço: {form.endereco}
+                </th>
+                <th colSpan={4} className="border left-text">
+                  Período: De {getPeriod(month)}
+                </th>
               </tr>
               <tr>
-                <th colSpan={6} className="border left-text">Atividade: </th>
-                <th colSpan={4} className="border left-text">Lotação: {form.lotacao}</th>
+                <th colSpan={6} className="border left-text">
+                  Atividade:{" "}
+                </th>
+                <th colSpan={4} className="border left-text">
+                  Lotação: {form.lotacao}
+                </th>
               </tr>
               <tr>
-                <th className="border left-text" colSpan={4}>
+                <th className="border left-text" colSpan={6}>
                   Empregado: {form.empregado} {form.nome}
                 </th>
-                <th className="border left-text" colSpan={3}>
-                  Cargo: {form.cargo}
-                </th>
-                <th className="border left-text" colSpan={3}>
+                <th className="border left-text" colSpan={6}>
                   CTPS: {form.ctps}
                 </th>
               </tr>
-              {/*  */}
+              <tr>
+                <th className="border left-text" colSpan={12}>
+                  Cargo: {form.cargo}
+                </th>
+              </tr>
               <tr>
                 <th colSpan={5} className="border left-text"></th>
                 <th colSpan={2} className="border left-text">
