@@ -13,7 +13,7 @@ function TableBody({ month }) {
           ))}
           <td className="border center-text max-width"></td>
           <td className="border center-text max-width"></td>
-          <td className="border center-text" colSpan={2}></td>
+          <td className="border center-text width-extra" colSpan={5}></td>
         </tr>
       </tbody>
     </>

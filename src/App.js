@@ -105,7 +105,7 @@ function App() {
           <table className="page-break to-print">
             <thead className="border">
               <tr>
-                <th colSpan={6} className="border left-text">
+                <th colSpan={4} className="border left-text">
                   Empregador: {form.empregador}
                 </th>
                 <th colSpan={4} className="border left-text">
@@ -113,7 +113,7 @@ function App() {
                 </th>
               </tr>
               <tr>
-                <th colSpan={6} className="border left-text">
+                <th colSpan={4} className="border left-text">
                   Endereço: {form.endereco}
                 </th>
                 <th colSpan={4} className="border left-text">
@@ -121,7 +121,7 @@ function App() {
                 </th>
               </tr>
               <tr>
-                <th colSpan={6} className="border left-text">
+                <th colSpan={4} className="border left-text">
                   Atividade:{" "}
                 </th>
                 <th colSpan={4} className="border left-text">

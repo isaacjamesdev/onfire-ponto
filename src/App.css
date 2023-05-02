@@ -55,11 +55,15 @@ th {
 }
 
 .max-width {
-  width: 50px;
+  width: 70px;
+}
+
+.width-extra {
+  width: 90px;
 }
 
 .to-print {
-  display: none;
+  /* display: none; */
 }
 
 .signature {
