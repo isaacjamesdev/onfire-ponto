@@ -1,38 +1,82 @@
-.App {
+.container {
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%; */
+  /* height: 100vh; */
+  /* background-color: #f2f2f2; */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  /* justify-content: center; */
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  font-size: 12px;
+}
+
+table.page-break {
+  page-break-after: always;
+  margin-top: 20px;
+}
+
+th {
+  font-size: 12px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.left {
+  text-align: center;
+  padding-left: 2px;
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.max-width {
+  width: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.to-print {
+  display: none;
+}
+
+@media print {
+  .hide {
+    display: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .to-print {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form {
+    display: none;
+  }
+
+  @page {
+    size: A4; /* Define o tamanho da folha */
+    margin: 2cm; /* Define as margens da folha */
+  }
+
+  body {
+    margin: 0; /* Remove as margens padrão do corpo do documento */
   }
 }
