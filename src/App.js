@@ -62,7 +62,11 @@ function App() {
         <Divider style={{ margin: "20px 0" }}>Dicas:</Divider>
         <p className="hints">
           1: Converta o .pdf para .doc através{` `}
-          <a href="https://www.ilovepdf.com/pt/pdf_para_word" target="_blank">
+          <a
+            href="https://www.ilovepdf.com/pt/pdf_para_word"
+            target="_blank"
+            rel="noreferrer"
+          >
             desse link
           </a>
           {` `}e edite o arquivo para adicionar férias, atestados e feriados.
