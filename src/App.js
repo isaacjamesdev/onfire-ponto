@@ -3,7 +3,11 @@ import { getListOfMonths, getPeriod } from "./utils";
 import "./App.css";
 import TableBody from "./components/Table";
 import Form from "./components/Form";
-import { Divider } from "@mui/material";
+import { Accordion, AccordionSummary, Divider, Typography } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+
+import pix from "./pix.png";
 
 const TABLE_HEADER = [
   { name: "Dia", colSpan: 1 },
@@ -54,6 +58,7 @@ function App() {
   };
 
   const [listOfMonths, setListOfMonths] = useState([]);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <div>
@@ -75,6 +80,18 @@ function App() {
           2: Nas configurações de impressão > Mais definições > desmarque a
           opção "Cabeçalhos e rodapés"{" "}
         </p>
+
+        <Divider style={{ margin: "20px 0" }} >Cafézinho:</Divider>
+        <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1d-content"
+            id="panel1d-header"
+          >
+            <Typography>Expanda-me</Typography>
+          </AccordionSummary>
+          <img src={pix} alt="Faz o pix bebê" width={200} height={200} />
+        </Accordion>
       </div>
       {listOfMonths.map((month) => (
         <div>
