@@ -80,7 +80,7 @@ function Form({ onChange, onSubmit }) {
           />
         </form>
         <Button variant="contained" type="button" onClick={onSubmit}>
-          Submit
+          Imprimir
         </Button>
       </div>
     </Box>
