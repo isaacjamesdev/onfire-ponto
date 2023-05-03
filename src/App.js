@@ -86,6 +86,9 @@ function App() {
           2: Nas configurações de impressão > Mais definições > desmarque a
           opção "Cabeçalhos e rodapés"{" "}
         </p>
+        <p className="hints">
+          3: Assinatura inteira é necessário somente no fim da página, nas demais (na assinatura do dia), só as iniciais ou rúbrica já é suficiente
+        </p>
 
         <p className="hints">
           Atenção: Se necessário, altere o cargo em determinadas páginas do documento.
