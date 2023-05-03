@@ -80,7 +80,7 @@ function App() {
           >
             desse link
           </a>
-          {` `}e edite o arquivo para adicionar férias, atestados e feriados.
+          {` `}(ou use algum editor de PDF de sua preferência) e edite o arquivo para adicionar férias, atestados e feriados.
         </p>
         <p className="hints">
           2: Nas configurações de impressão > Mais definições > desmarque a
