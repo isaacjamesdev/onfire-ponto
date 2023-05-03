@@ -74,24 +74,34 @@ function App() {
         <p className="hints">
           1: Converta o .pdf para .doc através{` `}
           <a
-            href="https://www.ilovepdf.com/pt/pdf_para_word"
+            href="https://online2pdf.com/pt/converter-pdf-para-word-com-ocr"
             target="_blank"
             rel="noreferrer"
           >
-            desse link
+            desse link¹
           </a>
-          {` `}(ou use algum editor de PDF de sua preferência) e edite o arquivo para adicionar férias, atestados e feriados.
+          {` `}(ou use algum editor de PDF de sua preferência) e edite o arquivo
+          para adicionar férias, atestados e feriados.
         </p>
         <p className="hints">
           2: Nas configurações de impressão > Mais definições > desmarque a
           opção "Cabeçalhos e rodapés"{" "}
         </p>
         <p className="hints">
-          3: Assinatura inteira é necessário somente no fim da página, nas demais (na assinatura do dia), só as iniciais ou rúbrica já é suficiente
+          3: Assinatura inteira é necessário somente no fim da página, nas
+          demais (na assinatura do dia), só as iniciais ou rúbrica já é
+          suficiente
         </p>
 
+        <p className="hints" style={{ color: "chocolate", fontSize: "12px" }}>
+          ¹: No site de conversão, Marque a opção "OCR avançado: aplica
+          reconhecimento de caracteres não apenas em digitalizações, mas em todo
+          o conteúdo do arquivo".
+        </p>
+        
         <p className="hints">
-          Atenção: Se necessário, altere o cargo em determinadas páginas do documento.
+          Atenção: Se necessário, altere o cargo em determinadas páginas do
+          documento.
         </p>
 
         <Divider style={{ margin: "20px 0" }}>Cafézinho:</Divider>

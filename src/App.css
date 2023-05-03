@@ -82,7 +82,7 @@ th {
 
 .hints {
   margin-top: 0;
-  margin-bottom: 4;
+  margin-bottom: 4px;
 }
 
 @media print {
