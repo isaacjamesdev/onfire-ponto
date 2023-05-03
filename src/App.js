@@ -87,6 +87,10 @@ function App() {
           opção "Cabeçalhos e rodapés"{" "}
         </p>
 
+        <p className="hints">
+          Atenção: Se necessário, altere o cargo em determinadas páginas do documento.
+        </p>
+
         <Divider style={{ margin: "20px 0" }}>Cafézinho:</Divider>
         <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)}>
           <AccordionSummary
