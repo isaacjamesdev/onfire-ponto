@@ -59,7 +59,7 @@ th {
 }
 
 .width-extra {
-  width: 90px;
+  width: 140px;
 }
 
 .to-print {
@@ -98,8 +98,9 @@ th {
   }
 
   @page {
-    size: A4; /* Define o tamanho da folha */
-    margin: 2cm; /* Define as margens da folha */
+    /* size: ; Define o tamanho da folha */
+    margin: auto; 
+    padding: 0;
   }
 
   body {
