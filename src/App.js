@@ -104,6 +104,11 @@ function App() {
           documento.
         </p>
 
+        <p className="hints">
+         Atenção²: O Cabeçalho do PDF está um pouco diferente do original, mas isso não
+          é problema. 
+        </p>
+
         <Divider style={{ margin: "20px 0" }}>Cafézinho:</Divider>
         <Accordion expanded={expanded} onChange={() => setExpanded(!expanded)}>
           <AccordionSummary
